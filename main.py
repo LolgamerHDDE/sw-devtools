@@ -86,6 +86,10 @@ def main():
     if args.install is not None:
         if args.install.lower() == 'python':
             python.install()
+    
+    if args.uninstall is not None:
+        if args.uninstall.lower() == 'python':
+            python.uninstall()
 
 if __name__ == "__main__":
     main()

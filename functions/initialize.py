@@ -76,6 +76,7 @@ def init_default_conifg():
             config_path = os.path.join(default_directory, "config.json")
             with open(config_path, 'w', encoding='utf-8') as config_file:
                 json.dump({"install_path": default_directory}, config_file, indent=4)
+            os.environ["SW_DEVTOOLS_CONFIG"] = config_path
             print(f"{BRIGHT_GREEN}Initialized configuration file at {config_path}.{RESET}")
         except Exception as e:
             print(f"{BRIGHT_RED}Failed to create configuration file: {e}{RESET}")
@@ -109,6 +110,7 @@ def init_default_conifg_ud(path: str):
             config_path = os.path.join(default_directory, "config.json")
             with open(config_path, 'w', encoding='utf-8') as config_file:
                 json.dump({"install_path": default_directory}, config_file, indent=4)
+            os.environ["SW_DEVTOOLS_CONFIG"] = config_path
             print(f"{BRIGHT_GREEN}Initialized configuration file at {config_path}.{RESET}")
         except Exception as e:
             print(f"{BRIGHT_RED}Failed to create configuration file: {e}{RESET}")
