@@ -3,6 +3,7 @@ import sys
 import argparse
 from functions.initialize import init_default_conifg, init_default_conifg_ud
 from functions.python import python
+from functions.php import php
 
 # ANSI escape codes for CLI colors
 RESET = "\033[0m"
@@ -86,10 +87,14 @@ def main():
     if args.install is not None:
         if args.install.lower() == 'python':
             python.install()
-    
+        if args.install.lower() == 'php':
+            php.install()
+
     if args.uninstall is not None:
         if args.uninstall.lower() == 'python':
             python.uninstall()
+        if args.uninstall.lower() == 'php':
+            php.uninstall()
 
 if __name__ == "__main__":
     main()
