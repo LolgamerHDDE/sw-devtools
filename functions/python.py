@@ -455,3 +455,92 @@ class python:
             print(f"{BRIGHT_YELLOW}Unexpected error while updating config: {e}{RESET}")
 
         print(f"{BRIGHT_GREEN}Uninstall completed (see messages above).{RESET}")
+
+    def status():
+        """Check and display the status of the Python installation."""
+        print(f"{BRIGHT_CYAN}Checking Python installation status...{RESET}\n")
+        
+        # Determine config path
+        config_path_candidate = CONFIG_FILE
+        if not config_path_candidate:
+            program_files = os.getenv('ProgramFiles') or r"C:\Program Files"
+            default_cfg = os.path.join(program_files, 'SyncWide Devtools', 'config.json')
+            if os.path.exists(default_cfg):
+                config_path_candidate = default_cfg
+        
+        # Load configuration
+        cfg = {}
+        if config_path_candidate and os.path.exists(config_path_candidate):
+            try:
+                with open(config_path_candidate, 'r', encoding='utf-8') as f:
+                    cfg = json.load(f) or {}
+            except Exception as e:
+                print(f"{BRIGHT_YELLOW}Could not load config: {e}{RESET}")
+        
+        # Get python path from config
+        python_path_value = cfg.get('python_path') if isinstance(cfg, dict) else None
+        
+        if not python_path_value:
+            print(f"{BRIGHT_RED}✗ Python is not installed via SyncWide Devtools{RESET}")
+            print(f"  No 'python_path' found in configuration.\n")
+            return
+        
+        # Determine installation directory
+        if python_path_value.lower().endswith('.exe'):
+            install_dir = os.path.dirname(python_path_value)
+            python_exe = python_path_value
+        else:
+            install_dir = python_path_value
+            python_exe = os.path.join(install_dir, 'python.exe')
+        
+        # Check if directory exists
+        if not os.path.exists(install_dir):
+            print(f"{BRIGHT_RED}✗ Python installation directory not found{RESET}")
+            print(f"  Expected: {install_dir}\n")
+            return
+        
+        # Check if executable exists
+        if not os.path.exists(python_exe):
+            print(f"{BRIGHT_YELLOW}⚠ Python directory exists but python.exe not found{RESET}")
+            print(f"  Directory: {install_dir}")
+            print(f"  Expected executable: {python_exe}\n")
+            return
+        
+        # Try to get version
+        version_info = "Unknown"
+        try:
+            result = subprocess.run(
+                [python_exe, '--version'],
+                capture_output=True,
+                text=True,
+                timeout=5
+            )
+            if result.returncode == 0:
+                version_info = result.stdout.strip() or result.stderr.strip()
+        except Exception:
+            pass
+        
+        # Check if in PATH
+        in_path = False
+        try:
+            env_key = r"SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment"
+            with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, env_key, 0, winreg.KEY_READ) as key:
+                try:
+                    path_value, _ = winreg.QueryValueEx(key, 'Path')
+                    path_parts = [p.strip().lower() for p in path_value.split(';') if p.strip()]
+                    in_path = any(os.path.abspath(install_dir).lower() == os.path.abspath(p).lower() for p in path_parts)
+                except Exception:
+                    pass
+        except Exception:
+            pass
+        
+        # Display status
+        print(f"{BRIGHT_GREEN}✓ Python is installed{RESET}")
+        print(f"  Version: {BRIGHT_CYAN}{version_info}{RESET}")
+        print(f"  Location: {BRIGHT_CYAN}{install_dir}{RESET}")
+        print(f"  Executable: {BRIGHT_CYAN}{python_exe}{RESET}")
+        print(f"  In System PATH: {BRIGHT_GREEN + 'Yes' + RESET if in_path else BRIGHT_YELLOW + 'No' + RESET}")
+        
+        if config_path_candidate:
+            print(f"  Config: {BRIGHT_CYAN}{config_path_candidate}{RESET}")
+        print()

@@ -51,6 +51,8 @@ BG_BRIGHT_MAGENTA = "\033[105m"
 BG_BRIGHT_CYAN = "\033[106m"
 BG_BRIGHT_WHITE = "\033[107m"
 
+CONFIG_FILE = os.getenv("SW_DEVTOOLS_CONFIG")
+
 def main():
     print(f"""{BRIGHT_CYAN}SyncWide Solutions Developer Tools (Version: 0.0.1b){RESET}
 
@@ -62,6 +64,7 @@ def main():
     parser.add_argument('--install', '-i', help='Install requested packages', type=str)
     parser.add_argument('--uninstall', '-u', help='Uninstall requested packages', type=str)
     parser.add_argument('--init', help='Initialize configuration for faster Command execution')
+    parser.add_argument('--status', help='Show the status of requested packages', type=str)
 
     args = parser.parse_args()
 
@@ -95,6 +98,12 @@ def main():
             python.uninstall()
         if args.uninstall.lower() == 'php':
             php.uninstall()
+    
+    if args.status is not None:
+        if args.status.lower() == 'python':
+            python.status()
+        if args.status.lower() == 'php':
+            php.status()
 
 if __name__ == "__main__":
     main()
