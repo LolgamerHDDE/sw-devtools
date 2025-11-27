@@ -181,12 +181,58 @@ class php:
             with zipfile.ZipFile(installer_path, 'r') as zip_ref:
                 zip_ref.extractall(install_path)
             print(f"{BRIGHT_GREEN}PHP installed successfully at '{install_path}'.{RESET}")
-            with open(config_path_candidate, 'w', encoding='utf-8') as config_file:
-                json.dump({"php_install_path": install_path}, config_file, indent=4)
-            os.environ["SW_DEVTOOLS_CONFIG"] = config_path_candidate
-            print(f"{BRIGHT_GREEN}Initialized configuration file at {config_path_candidate}.{RESET}")
+            
+            try:
+                os.remove(installer_path)
+            except Exception as e:
+                print(f"{BRIGHT_YELLOW}Could not delete installer file located at {installer_path}: {e}{RESET}")
+            
             add_to_path(install_path, scope='system')  # Requires admin
             print(f"{BRIGHT_GREEN}Added PHP installation directory to system PATH.{RESET}")
+
+            # Write the php_path back into the configuration file so future runs know where PHP is installed
+            try:
+                # prefer a config path candidate if available, otherwise write a default config under Program Files
+                config_to_write = None
+                if 'config_path_candidate' in locals() and config_path_candidate:
+                    config_to_write = config_path_candidate
+                else:
+                    program_files = os.getenv('ProgramFiles') or r"C:\Program Files"
+                    cfg_dir = os.path.join(program_files, 'SyncWide Devtools')
+                    try:
+                        os.makedirs(cfg_dir, exist_ok=True)
+                    except Exception:
+                        pass
+                    config_to_write = os.path.join(cfg_dir, 'config.json')
+
+                php_exec = os.path.join(install_path, 'php.exe') if install_path else None
+                php_path_value = php_exec if php_exec and os.path.exists(php_exec) else install_path
+
+                config_data = {}
+                # load existing config if present
+                try:
+                    if os.path.exists(config_to_write):
+                        with open(config_to_write, 'r', encoding='utf-8') as f:
+                            try:
+                                config_data = json.load(f) or {}
+                            except Exception:
+                                config_data = {}
+                except Exception:
+                    config_data = {}
+
+                # set the php_path key
+                if php_path_value:
+                    config_data['php_path'] = php_path_value
+                    try:
+                        with open(config_to_write, 'w', encoding='utf-8') as f:
+                            json.dump(config_data, f, indent=4)
+                        print(f"{BRIGHT_GREEN}Wrote 'php_path' to config at '{config_to_write}'.{RESET}")
+                    except Exception as e:
+                        print(f"{BRIGHT_YELLOW}Failed to write php_path to config '{config_to_write}': {e}{RESET}")
+                else:
+                    print(f"{BRIGHT_YELLOW}No install path available to write into config.{RESET}")
+            except Exception as e:
+                print(f"{BRIGHT_YELLOW}Unexpected error while writing config: {e}{RESET}")
 
         except Exception as e:
             print(f"{BRIGHT_RED}An error occurred during PHP installation: {e}{RESET}")
