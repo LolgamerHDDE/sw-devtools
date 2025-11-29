@@ -74,6 +74,32 @@
         "en_US": {
           "eval_iso": "https://go.microsoft.com/fwlink/p/?LinkID=2195275&clcid=0x409&culture=en-us&country=US"
         }
+      },
+      "2025": {
+        "en_US": {
+          "eval_iso": "https://go.microsoft.com/fwlink/?linkid=2293312&clcid=0x407&culture=de-de&country=de"
+        },
+        "fr_FR": {
+          "eval_iso": "https://go.microsoft.com/fwlink/?linkid=2292920&clcid=0x407&culture=de-de&country=de"
+        },
+        "zh_CN": {
+          "eval_iso": "https://go.microsoft.com/fwlink/?linkid=2293422&clcid=0x407&culture=de-de&country=de"
+        },
+        "de_DE": {
+          "eval_iso": "https://go.microsoft.com/fwlink/?linkid=2293216&clcid=0x407&culture=de-de&country=de"
+        },
+        "it_IT": {
+          "eval_iso": "https://go.microsoft.com/fwlink/?linkid=2293217&clcid=0x407&culture=de-de&country=de"
+        },
+        "ja_JP": {
+          "eval_iso": "https://go.microsoft.com/fwlink/?linkid=2293423&clcid=0x407&culture=de-de&country=de"
+        },
+        "ru_RU": {
+          "eval_iso": "https://go.microsoft.com/fwlink/?linkid=2293424&clcid=0x407&culture=de-de&country=de"
+        },
+        "es_ES": {
+          "eval_iso": "https://go.microsoft.com/fwlink/?linkid=2293018&clcid=0x407&culture=de-de&country=de"
+        }
       }
     },
     "legacy_archive": {
