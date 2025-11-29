@@ -1,0 +1,331 @@
+{
+  "windows": {
+    "11": {
+      "en_US": {
+        "media_creation_tool_download": "https://go.microsoft.com/fwlink/?linkid=2156295",
+        "note": "Run tool and select English (United States) during setup"
+      },
+      "de_DE": {
+        "media_creation_tool_download": "https://www.microsoft.com/de-de/software-download/windows11",
+        "note": "Download from German Microsoft site, select language during setup"
+      },
+      "fr_FR": {
+        "media_creation_tool_download": "https://www.microsoft.com/fr-fr/software-download/windows11",
+        "note": "Download from French Microsoft site, select language during setup"
+      },
+      "es_ES": {
+        "media_creation_tool_download": "https://www.microsoft.com/es-es/software-download/windows11",
+        "note": "Download from Spanish Microsoft site, select language during setup"
+      },
+      "it_IT": {
+        "media_creation_tool_download": "https://www.microsoft.com/it-it/software-download/windows11",
+        "note": "Download from Italian Microsoft site, select language during setup"
+      },
+      "ja_JP": {
+        "media_creation_tool_download": "https://www.microsoft.com/ja-jp/software-download/windows11",
+        "note": "Download from Japanese Microsoft site, select language during setup"
+      },
+      "zh_CN": {
+        "media_creation_tool_download": "https://www.microsoft.com/zh-cn/software-download/windows11",
+        "note": "Download from Chinese Microsoft site, select language during setup"
+      },
+      "ru_RU": {
+        "media_creation_tool_download": "https://www.microsoft.com/ru-ru/software-download/windows11",
+        "note": "Download from Russian Microsoft site, select language during setup"
+      }
+    },
+    "10": {
+      "en_US": {
+        "media_creation_tool_download": "https://go.microsoft.com/fwlink/?LinkId=691209",
+        "note": "Run tool and select English (United States) during setup"
+      },
+      "de_DE": {
+        "media_creation_tool_download": "https://www.microsoft.com/de-de/software-download/windows10",
+        "note": "Download from German Microsoft site, select language during setup"
+      },
+      "fr_FR": {
+        "media_creation_tool_download": "https://www.microsoft.com/fr-fr/software-download/windows10",
+        "note": "Download from French Microsoft site, select language during setup"
+      },
+      "es_ES": {
+        "media_creation_tool_download": "https://www.microsoft.com/es-es/software-download/windows10",
+        "note": "Download from Spanish Microsoft site, select language during setup"
+      },
+      "ja_JP": {
+        "media_creation_tool_download": "https://www.microsoft.com/ja-jp/software-download/windows10",
+        "note": "Download from Japanese Microsoft site, select language during setup"
+      },
+      "zh_CN": {
+        "media_creation_tool_download": "https://www.microsoft.com/zh-cn/software-download/windows10",
+        "note": "Download from Chinese Microsoft site, select language during setup"
+      },
+      "ru_RU": {
+        "media_creation_tool_download": "https://www.microsoft.com/ru-ru/software-download/windows10",
+        "note": "Download from Russian Microsoft site, select language during setup"
+      }
+    },
+    "server": {
+      "2022": {
+        "en_US": {
+          "eval_iso": "https://go.microsoft.com/fwlink/p/?LinkID=2195167&clcid=0x409&culture=en-us&country=US"
+        }
+      },
+      "2019": {
+        "en_US": {
+          "eval_iso": "https://go.microsoft.com/fwlink/p/?LinkID=2195275&clcid=0x409&culture=en-us&country=US"
+        }
+      }
+    },
+    "legacy_archive": {
+      "7": {
+        "en_US": {
+          "ultimate_iso": "https://archive.org/download/windows-7-sp0-sp1-msdn-iso-files-en-de-ru-tr-x86-x64/en_windows_7_ultimate_with_sp1_x64_dvd_u_677332.iso"
+        },
+        "de_DE": {
+          "ultimate_iso": "https://archive.org/download/windows-7-sp0-sp1-msdn-iso-files-en-de-ru-tr-x86-x64/de_windows_7_ultimate_with_sp1_x64_dvd_u_677333.iso"
+        },
+        "ru_RU": {
+          "ultimate_iso": "https://archive.org/download/windows-7-sp0-sp1-msdn-iso-files-en-de-ru-tr-x86-x64/ru_windows_7_ultimate_with_sp1_x64_dvd_u_677334.iso"
+        },
+        "tr_TR": {
+          "ultimate_iso": "https://archive.org/download/windows-7-sp0-sp1-msdn-iso-files-en-de-ru-tr-x86-x64/tr_windows_7_ultimate_with_sp1_x64_dvd_u_677335.iso"
+        }
+      },
+      "xp": {
+        "en_US": {
+          "professional_iso": "https://archive.org/download/windows-xp-all-sp-msdn-iso-files-en-de-ru-tr-x86-x64/en_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-73974.iso"
+        },
+        "de_DE": {
+          "professional_iso": "https://archive.org/download/windows-xp-all-sp-msdn-iso-files-en-de-ru-tr-x86-x64/de_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-73975.iso"
+        },
+        "ru_RU": {
+          "professional_iso": "https://archive.org/download/windows-xp-all-sp-msdn-iso-files-en-de-ru-tr-x86-x64/ru_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-73976.iso"
+        },
+        "tr_TR": {
+          "professional_iso": "https://archive.org/download/windows-xp-all-sp-msdn-iso-files-en-de-ru-tr-x86-x64/tr_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-73977.iso"
+        }
+      }
+    }
+  },
+  "linux": {
+    "ubuntu": {
+      "24.04_lts": {
+        "en_US": {
+          "desktop_amd64": "https://releases.ubuntu.com/24.04/ubuntu-24.04.1-desktop-amd64.iso",
+          "server_amd64": "https://releases.ubuntu.com/24.04/ubuntu-24.04.1-live-server-amd64.iso",
+          "note": "Select language during installation"
+        },
+        "de_DE": {
+          "desktop_amd64": "https://releases.ubuntu.com/24.04/ubuntu-24.04.1-desktop-amd64.iso",
+          "note": "Same ISO as all languages; select German during installation"
+        },
+        "fr_FR": {
+          "desktop_amd64": "https://releases.ubuntu.com/24.04/ubuntu-24.04.1-desktop-amd64.iso",
+          "note": "Same ISO as all languages; select French during installation"
+        },
+        "es_ES": {
+          "desktop_amd64": "https://releases.ubuntu.com/24.04/ubuntu-24.04.1-desktop-amd64.iso",
+          "note": "Same ISO as all languages; select Spanish during installation"
+        },
+        "it_IT": {
+          "desktop_amd64": "https://releases.ubuntu.com/24.04/ubuntu-24.04.1-desktop-amd64.iso",
+          "note": "Same ISO as all languages; select Italian during installation"
+        },
+        "ja_JP": {
+          "desktop_amd64": "https://releases.ubuntu.com/24.04/ubuntu-24.04.1-desktop-amd64.iso",
+          "note": "Same ISO as all languages; select Japanese during installation"
+        },
+        "zh_CN": {
+          "desktop_amd64": "https://releases.ubuntu.com/24.04/ubuntu-24.04.1-desktop-amd64.iso",
+          "note": "Same ISO as all languages; select Simplified Chinese during installation"
+        },
+        "zh_TW": {
+          "desktop_amd64": "https://releases.ubuntu.com/24.04/ubuntu-24.04.1-desktop-amd64.iso",
+          "note": "Same ISO as all languages; select Traditional Chinese during installation"
+        },
+        "ru_RU": {
+          "desktop_amd64": "https://releases.ubuntu.com/24.04/ubuntu-24.04.1-desktop-amd64.iso",
+          "note": "Same ISO as all languages; select Russian during installation"
+        }
+      },
+      "22.04_lts": {
+        "en_US": {
+          "desktop_amd64": "https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso",
+          "server_amd64": "https://releases.ubuntu.com/jammy/ubuntu-22.04.5-live-server-amd64.iso"
+        },
+        "de_DE": {
+          "desktop_amd64": "https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso",
+          "note": "Same ISO; select German during installation"
+        },
+        "fr_FR": {
+          "desktop_amd64": "https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso",
+          "note": "Same ISO; select French during installation"
+        }
+      }
+    },
+    "fedora": {
+      "workstation": {
+        "en_US": {
+          "live_iso": "https://download.fedoraproject.org/pub/fedora/linux/releases/43/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-43-1.2.iso",
+          "note": "Select language during boot"
+        },
+        "de_DE": {
+          "live_iso": "https://download.fedoraproject.org/pub/fedora/linux/releases/43/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-43-1.2.iso",
+          "note": "Same ISO; select German during boot"
+        },
+        "fr_FR": {
+          "live_iso": "https://download.fedoraproject.org/pub/fedora/linux/releases/43/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-43-1.2.iso",
+          "note": "Same ISO; select French during boot"
+        },
+        "ja_JP": {
+          "live_iso": "https://download.fedoraproject.org/pub/fedora/linux/releases/43/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-43-1.2.iso",
+          "note": "Same ISO; select Japanese during boot"
+        },
+        "zh_CN": {
+          "live_iso": "https://download.fedoraproject.org/pub/fedora/linux/releases/43/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-43-1.2.iso",
+          "note": "Same ISO; select Chinese during boot"
+        }
+      },
+      "server": {
+        "en_US": {
+          "dvd_iso": "https://download.fedoraproject.org/pub/fedora/linux/releases/43/Server/x86_64/iso/Fedora-Server-dvd-x86_64-43-1.2.iso"
+        },
+        "de_DE": {
+          "dvd_iso": "https://download.fedoraproject.org/pub/fedora/linux/releases/43/Server/x86_64/iso/Fedora-Server-dvd-x86_64-43-1.2.iso",
+          "note": "Same ISO; select German during installation"
+        }
+      }
+    },
+    "debian": {
+      "12": {
+        "en_US": {
+          "netinst_amd64": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.2.0-amd64-netinst.iso",
+          "dvd_amd64": "https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-13.2.0-amd64-DVD-1.iso"
+        },
+        "de_DE": {
+          "netinst_amd64": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.2.0-amd64-netinst.iso",
+          "note": "Same ISO; select German during installation"
+        },
+        "fr_FR": {
+          "netinst_amd64": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.2.0-amd64-netinst.iso",
+          "note": "Same ISO; select French during installation"
+        },
+        "ja_JP": {
+          "netinst_amd64": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.2.0-amd64-netinst.iso",
+          "note": "Same ISO; select Japanese during installation"
+        }
+      }
+    },
+    "almalinux": {
+      "9.5": {
+        "en_US": {
+          "dvd_x86_64": "https://repo.almalinux.org/almalinux/9.5/isos/x86_64/AlmaLinux-9.5-x86_64-dvd.iso"
+        },
+        "de_DE": {
+          "dvd_x86_64": "https://repo.almalinux.org/almalinux/9.5/isos/x86_64/AlmaLinux-9.5-x86_64-dvd.iso",
+          "note": "Same ISO; select German during installation"
+        },
+        "fr_FR": {
+          "dvd_x86_64": "https://repo.almalinux.org/almalinux/9.5/isos/x86_64/AlmaLinux-9.5-x86_64-dvd.iso",
+          "note": "Same ISO; select French during installation"
+        }
+      }
+    },
+    "rocky_linux": {
+      "9.5": {
+        "en_US": {
+          "dvd_x86_64": "https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9-latest-x86_64-dvd.iso"
+        },
+        "de_DE": {
+          "dvd_x86_64": "https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9-latest-x86_64-dvd.iso",
+          "note": "Same ISO; select German during installation"
+        }
+      }
+    },
+    "centos_stream": {
+      "9": {
+        "en_US": {
+          "dvd_x86_64": "https://mirrors.centos.org/mirrorlist?path=/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-dvd1.iso&redirect=1&protocol=https"
+        },
+        "de_DE": {
+          "dvd_x86_64": "https://mirrors.centos.org/mirrorlist?path=/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-dvd1.iso&redirect=1&protocol=https",
+          "note": "Same ISO; select German during installation"
+        }
+      }
+    },
+    "arch_linux": {
+      "latest": {
+        "en_US": {
+          "iso": "https://geo.mirror.pkgbuild.com/iso/2025.11.01/archlinux-2025.11.01-x86_64.iso"
+        },
+        "de_DE": {
+          "iso": "https://geo.mirror.pkgbuild.com/iso/2025.11.01/archlinux-2025.11.01-x86_64.iso",
+          "note": "Same ISO; select German during installation"
+        }
+      }
+    },
+    "kali_linux": {
+      "2025.3": {
+        "en_US": {
+          "installer": "https://cdimage.kali.org/kali-2025.3/kali-linux-2025.3-installer-amd64.iso",
+          "live": "https://cdimage.kali.org/kali-2025.3/kali-linux-2025.3-live-amd64.iso"
+        },
+        "de_DE": {
+          "installer": "https://cdimage.kali.org/kali-2025.3/kali-linux-2025.3-installer-amd64.iso",
+          "note": "Same ISO; select German during installation"
+        }
+      }
+    },
+    "linux_mint": {
+      "22.1": {
+        "en_US": {
+          "cinnamon": "https://mirrors.edge.kernel.org/linuxmint/stable/22.1/linuxmint-22.1-cinnamon-64bit.iso",
+          "note": "Select English during boot; other languages available after internet connection"
+        },
+        "de_DE": {
+          "cinnamon": "https://mirrors.edge.kernel.org/linuxmint/stable/22.1/linuxmint-22.1-cinnamon-64bit.iso",
+          "note": "Same ISO; select German during boot if internet available"
+        },
+        "fr_FR": {
+          "cinnamon": "https://mirrors.edge.kernel.org/linuxmint/stable/22.1/linuxmint-22.1-cinnamon-64bit.iso",
+          "note": "Same ISO; select French during boot if internet available"
+        }
+      }
+    },
+    "opensuse": {
+      "leap_15.6": {
+        "en_US": {
+          "dvd_x86_64": "https://download.opensuse.org/distribution/leap/15.6/iso/openSUSE-Leap-15.6-DVD-x86_64-Media.iso"
+        },
+        "de_DE": {
+          "dvd_x86_64": "https://download.opensuse.org/distribution/leap/15.6/iso/openSUSE-Leap-15.6-DVD-x86_64-Media.iso",
+          "note": "Same ISO; select German during installation"
+        },
+        "fr_FR": {
+          "dvd_x86_64": "https://download.opensuse.org/distribution/leap/15.6/iso/openSUSE-Leap-15.6-DVD-x86_64-Media.iso",
+          "note": "Same ISO; select French during installation"
+        }
+      }
+    }
+  },
+  "bsd": {
+    "freebsd": {
+      "14.2": {
+        "en_US": {
+          "dvd_x86_64": "https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.2/FreeBSD-14.2-RELEASE-amd64-dvd1.iso"
+        },
+        "de_DE": {
+          "dvd_x86_64": "https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.2/FreeBSD-14.2-RELEASE-amd64-dvd1.iso",
+          "note": "Same ISO; select German during installation"
+        }
+      }
+    }
+  },
+  "important_notes": {
+    "note_1": "Most modern Linux distributions and Windows 10/11 use a single ISO for all languages",
+    "note_2": "Users select their preferred language during the installation/boot process",
+    "note_3": "Windows legacy versions (7, XP) and archive.org have separate language ISOs",
+    "note_4": "For regions, Windows has localized Microsoft download pages that direct to language selection",
+    "note_5": "Linux Mint can create localized ISOs using the iso-localize tool, but official downloads are English-based"
+  }
+}

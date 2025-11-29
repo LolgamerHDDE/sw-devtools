@@ -4,6 +4,7 @@ import argparse
 from functions.initialize import init_default_conifg, init_default_conifg_ud
 from functions.python import python
 from functions.php import php
+from functions.iso import list_available_isos, download_iso
 
 # ANSI escape codes for CLI colors
 RESET = "\033[0m"
@@ -65,6 +66,8 @@ def main():
     parser.add_argument('--uninstall', '-u', help='Uninstall requested packages', type=str)
     parser.add_argument('--init', help='Initialize configuration for faster Command execution')
     parser.add_argument('--status', help='Show the status of requested packages', type=str)
+    parser.add_argument('--iso', help='List available ISOs or download with path (e.g., windows/11/media_creation_tool_download)', type=str, nargs='?', const='list')
+    parser.add_argument('--language', '--lang', help='Sets the language for the requested ISO image (e.g., en_US, de_DE, fr_FR)', type=str, default='en_US')
 
     args = parser.parse_args()
 
@@ -104,6 +107,18 @@ def main():
             python.status()
         if args.status.lower() == 'php':
             php.status()
+
+    if args.iso is not None:
+        if args.iso == 'list' or args.iso.lower() == 'list':
+            list_available_isos()
+        else:
+            # Download the ISO with the specified path and language
+            language = args.language if args.language else 'en_US'
+            try:
+                download_iso(args.iso, language)
+            except Exception as e:
+                print(f"{BRIGHT_RED}Failed to download ISO: {e}{RESET}")
+                sys.exit(1)
 
 if __name__ == "__main__":
     main()
